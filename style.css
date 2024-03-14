@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: humble;
+    src: url(humble.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 15px;
+
+}
+
+.cell{
+    border: 5px groove #7700ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    text-align: center;
+    cursor: pointer;
+    font-family: humble, sans-serif;
+    background-color: #faf0ff;
+    opacity: 0.7;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    background: url(https://giffiles.alphacoders.com/215/215784.gif);
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    margin-bottom: 2%;
+    font-family: humble, sans-serif;
+    font-size: 4em;
+    color: #d279ff;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:0;
+    padding: 1%;
+    position: relative;
+    bottom: 0;
+    margin-top: 5%;
+}
+
+.footer-btn a {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: solid .15rem #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 2em;
+    position: relative;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.footer-btn a::before {
+    background: #7700ff;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.footer-btn a:hover::before {
+    width: 100%;
+}
+
+.footer-text p {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight:bolder;
+    color: #ffffff;
+}
+
+.footer-text a {
+    text-decoration: none;
+}  
+
+.footer-text span{
+    color: #7700ff;
+}
+
+.footer-text span:hover {
+    cursor: pointer;
+    color: #d279ff;
+}
+
+/* RESPONSIVIDADE */
+
+@media all and (max-width:820px){
+    
+    body{
+        margin: auto;
+    }
+
+
+    h1{
+        font-size: 3em;
+        margin-bottom: 10%;
+    }
+
+    .board{
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 15px;
+    
+    }
+    
+    
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 1em;
+        margin: auto;
+        position: relative;
+        bottom: 0;
+        margin-top: 25%;
+    }
+
+    .footer-text p {
+        font-family: sans-serif;
+        color: #ffffff;
+        margin-top: 10px;
+    }
+}
+
+
